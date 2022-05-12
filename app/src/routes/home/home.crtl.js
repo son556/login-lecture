@@ -2,14 +2,17 @@
 const User = require("../../models/User.js");
 const UserStorage = require("../../models/UserStorage.js");
 const output = {
-    hello : (req, res) => {
-    res.render("home/index");
+    hello: (req, res) => {
+        res.render("home/index");
     },
-
-    login : (req, res) => {
-    res.render("home/login");
+    login: (req, res) => {
+        res.render("home/login");
     },
-    register : (req, res) => {
+    test: (req, res) => {
+        res.write("hello world!");
+        res.end();
+    },
+    register: (req, res) => {
         res.render("home/register");
     }
 };
@@ -21,11 +24,11 @@ const process = {
         const user = new User(req.body);
         const response = user.login();
         return res.json(response);
-        
+
         // const id = req.body.id,
         //     psword = req.body.psword;
         // const users = UserStorage.getUsers("id", "psword");
-        
+
         // const response = {};
         // if (users.id.includes(id)) {
         //     const idx = users.id.indexOf(id);
@@ -41,7 +44,7 @@ const process = {
 };
 
 
-module.exports ={
+module.exports = {
     output,
     process,
 };
