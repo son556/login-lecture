@@ -5,7 +5,7 @@ const id = document.querySelector("#id"),
     psword = document.querySelector("#psword"),
     loginBtn = document.querySelector("#button");
 
-loginBtn.addEventListener("click",login);
+loginBtn.addEventListener("click",login); //
 
 function login() {
     const req = {
