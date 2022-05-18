@@ -3,7 +3,7 @@
 const UserStorage = require("./UserStorage");
 class User{
     constructor(body) {
-        this.body = body;
+        this.body = body;//
     }
 
     async login() {
@@ -33,6 +33,10 @@ class User{
             console.log(a.msg);
             return a;
         }
+        
+    }
+
+    async post() {
         
     }
 
