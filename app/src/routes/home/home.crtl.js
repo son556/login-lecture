@@ -29,7 +29,7 @@ const process = {
     const response = await user.register();
     return res.json(response);
   },
-
+  
 };
 
 module.exports = {

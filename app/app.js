@@ -23,21 +23,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/src/public`));
 app.use("/", home); // use ->미들 웨어를 등록해주는 메서드.
 
-var PythonShell = require("python-shell");
-var options = {
-    mode: 'text',
-    pythonPath: '',
-    pythonOptions: ['-u'],
-    scriptPath: '',
-    args: ['D:/nodejs/server_test/app/uploadedFiles/']
-};
-
-PythonShell.PythonShell.run('test.py', options, function(err, results){
-    
-    if (err) { return err};
-    
-    console.log('results: %j', results);
-    
-});  
-
-module.exports = app;  
+module.exports = app;
